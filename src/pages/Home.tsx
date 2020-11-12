@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonInfiniteScroll,IonListHeader, IonInfiniteScrollContent, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonRadio, IonCheckbox, IonList, IonItem, IonLabel, IonItemDivider,IonButton, IonRadioGroup, IonSearchbar  } from '@ionic/react';
+import { IonListHeader, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonRadio, IonCheckbox, IonList, IonItem, IonLabel,IonButton, IonRadioGroup, IonSearchbar  } from '@ionic/react';
 
 
 
@@ -15,8 +15,9 @@ function fruit_funct(){
   var lookup:{[key: string]: any} = [];
      var items = your_collection;
      var result = [];
-
-     for (var item, i = 0; item = items[i++];) {
+     var item = items[0];
+     for (var i = 1; i < items.length; i++) {
+        
         var name = item.fruit;
 
          if (!(name in lookup)) {
@@ -27,6 +28,7 @@ function fruit_funct(){
                 result.push({"fruit" : name, "isCheck":false});
              }
          }
+         item = items[i];
      }
      fruit_arr = result;
   
@@ -40,7 +42,8 @@ function country_funct() {
      var country_s: { [key: string]: any } = sub_country;
      var items = your_collection;
      var result:any[] = [];
-     for (var item, i = 0; item = items[i++];) {
+     var item = items[0];
+     for (var i = 1; i < items.length; i++) {
         var name = item.country;
 
          if (!(name in lookup)) {
@@ -51,6 +54,7 @@ function country_funct() {
                 result.push({"country" : name, "sub" : name, "isCheck":false});
              }
          }
+         item = items[i];
      }
      
      Object.keys(country_s).forEach(function(key) {
@@ -88,9 +92,9 @@ const Home: React.FC = () => {
             country_s1.push(str_c);
         }
      }
-     for (var i = 0; i < y.length; i++) {
-        if (y[i].getAttribute("aria-checked") === "true") {
-            var str_f:string = (y[i].getAttribute("value") || "");
+     for (var i2 = 0; i2 < y.length; i2++) {
+        if (y[i2].getAttribute("aria-checked") === "true") {
+            var str_f:string = (y[i2].getAttribute("value") || "");
             fruit_s = str_f;
         }
      }
@@ -127,9 +131,9 @@ const Home: React.FC = () => {
 	}
     });
     var html_str:string = "<ion-grid> <ion-row class='row'><ion-col class='col'>Active </ion-col><ion-col class='col'>MRL</ion-col><ion-col class='col'>Product</ion-col></ion-row>";
-    for (var i = 0; i < final_result.length; i++) {
-       if (final_result[i].mrl !== "N") {
-            html_str += "<ion-row class='row'> <ion-col class='col'> " + final_result[i].active + " </ion-col> <ion-col class='col'>  " + final_result[i].mrl + " </ion-col> <ion-col class='col'> " + myFunction(final_result[i].product) + " </ion-col> </ion-row>";
+    for (var i3 = 0; i3 < final_result.length; i3++) {
+       if (final_result[i3].mrl !== "N") {
+            html_str += "<ion-row class='row'> <ion-col class='col'> " + final_result[i3].active + " </ion-col> <ion-col class='col'>  " + final_result[i3].mrl + " </ion-col> <ion-col class='col'> " + myFunction(final_result[i3].product) + " </ion-col> </ion-row>";
        }
 
     }
@@ -171,8 +175,7 @@ const Home: React.FC = () => {
             elem_show.appendChild(lbl);  
         }
     }
-  const [checked, setChecked] = useState(false);
-  const [selected, setSelected] = useState<string>('biff');
+  const [selected] = useState<string>('biff');
 const [searchText, setSearchText] = useState('');
   return (
     <IonPage>

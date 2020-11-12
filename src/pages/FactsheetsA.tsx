@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { IonBackButton,IonButtons, IonListHeader, IonContent,IonRow, IonCol, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel,IonButton, IonGrid,IonSlides,IonSlide  } from '@ionic/react';
+import React from 'react';
+import { IonBackButton,IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonSlides,IonSlide  } from '@ionic/react';
 
 
 

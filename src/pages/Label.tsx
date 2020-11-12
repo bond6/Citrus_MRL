@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
-import { IonBackButton,IonButtons, IonListHeader, IonContent,IonRow, IonCol, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel,IonButton, IonGrid,IonSlides,IonSlide} from '@ionic/react';
+import React from 'react';
+import { IonBackButton,IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonSlides,IonSlide} from '@ionic/react';
 
 
 
 import './Label.css';
-const slideOpts = {
-  grabCursor: true,
-  cubeEffect: {
-    shadow: true,
-    slideShadows: true,
-    shadowOffset: 20,
-    shadowScale: 0.94,
-  }};
+
 
 const Label: React.FC = () => {
   return (
