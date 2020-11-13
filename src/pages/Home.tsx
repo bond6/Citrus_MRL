@@ -132,10 +132,10 @@ const Home: React.FC = () => {
 	   }
 	}
     });
-    var html_str:string = "<ion-grid> <ion-row class='row'><ion-col size='3' class='col'>Active </ion-col><ion-col size='3' class='col'>MRL</ion-col><ion-col class='col' size='3'>Product</ion-col></ion-row>";
+    var html_str:string = "<ion-grid> <ion-row class='row'><ion-col size='4' class='col'>Active </ion-col><ion-col size='4' class='col'>MRL</ion-col><ion-col class='col' size='4'>Product</ion-col></ion-row>";
     for (var i3 = 0; i3 < final_result.length; i3++) {
        if (final_result[i3].mrl !== "N") {
-            html_str += "<ion-row class='row'> <ion-col size='3' class='col'> " + final_result[i3].active + " </ion-col> <ion-col size='3' class='col'>  " + final_result[i3].mrl + " </ion-col> <ion-col size='3' class='col'> " + myFunction(final_result[i3].product) + " </ion-col> </ion-row>";
+            html_str += "<ion-row class='row'> <ion-col size='4' class='col'> " + final_result[i3].active + " </ion-col> <ion-col size='4' class='col'>  " + final_result[i3].mrl + " </ion-col> <ion-col size='4' class='col'> " + myFunction(final_result[i3].product) + " </ion-col> </ion-row>";
        }
 
     }
