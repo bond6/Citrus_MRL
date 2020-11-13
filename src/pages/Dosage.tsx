@@ -18,7 +18,7 @@ const Dosage: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle>Product application dosages as registered in RSA:</IonTitle>
+            <IonTitle>Dosages as registered in RSA:</IonTitle>
           </IonToolbar>
         </IonHeader>
             <IonGrid id="table_products">
