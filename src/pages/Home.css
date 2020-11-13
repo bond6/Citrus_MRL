@@ -3,6 +3,9 @@
     font-weight: bold;
     text-align: center;
 }
+ IonGrid {
+    font-size: 1vw;
+  }
 .col{
   word-wrap: break-word;
   border-color: black; 

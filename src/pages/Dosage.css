@@ -1,3 +1,6 @@
+ IonGrid {
+    font-size: 1vw;
+  }
 IonRow:first-child{
     font-weight: bold;
     text-align: center;
