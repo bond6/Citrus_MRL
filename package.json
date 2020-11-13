@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.12.5",
     "@capacitor/android": "^2.4.2",
     "@capacitor/core": "2.4.2",
+    "@expo/vector-icons": "^10.2.1",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
     "@testing-library/jest-dom": "^4.2.4",
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.12.1",
     "@capacitor/cli": "2.4.2",
     "@ionic/lab": "3.2.9",
     "react-scripts": "4.0.0"
