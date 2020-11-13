@@ -278,7 +278,7 @@ const [searchText, setSearchText] = useState('');
           ))}
           </IonList>
         
-
+        <IonButton className="button_click" onClick={function() {check_fun(); go_bottom()}}>Get MRLs</IonButton>
           <IonListHeader><IonLabel><h1>Countries Selected</h1></IonLabel></IonListHeader>
           <IonList class="country_sel"> <IonLabel id="RSA"> <div>RSA</div> </IonLabel> </IonList>
           <IonListHeader><IonLabel><h1>MRL Table</h1></IonLabel></IonListHeader>
