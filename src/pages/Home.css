@@ -17,6 +17,6 @@
 .button_click {
     position: fixed;
     z-index:10;
-    top:10;
+    top:100px;
 }
 img { width:25px;}
