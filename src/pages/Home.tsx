@@ -238,7 +238,7 @@ const [searchText, setSearchText] = useState('');
             <IonTitle size="large">Citrus MRL</IonTitle>
           </IonToolbar>
         </IonHeader>
-            <IonButton style="position: fixed" className="button_click" onClick={function() {check_fun(); go_bottom()}}>Get MRLs</IonButton>
+            <IonButton className="button_click" onClick={function() {check_fun(); go_bottom()}}>Get MRLs</IonButton>
         <IonButton fill="clear" onClick={function() {window.open("https://www.facebook.com/ICAInternationalChemicals/?rf=1585922241735402",'_system', 'location=yes');}}>
                     <img alt="Facebook" src="/assets/img/facebook.png" />
         </IonButton>
