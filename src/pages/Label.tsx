@@ -5,7 +5,11 @@ import { IonBackButton,IonButtons, IonContent, IonHeader, IonPage, IonTitle, Ion
 
 import './Label.css';
 
-
+const slideOpts = {
+    effect: 'cube',initialSlide: 0,
+    speed: 400
+  
+  };
 const Label: React.FC = () => {
   return (
     <IonPage>
@@ -14,7 +18,7 @@ const Label: React.FC = () => {
         <IonButtons slot="start">
             <IonBackButton defaultHref="/home" />
           </IonButtons>
-          <IonTitle>Dosage</IonTitle>
+          <IonTitle>Label</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -23,7 +27,7 @@ const Label: React.FC = () => {
             <IonTitle size="large">Label</IonTitle>
           </IonToolbar>
         </IonHeader>
-          <IonSlides>
+          <IonSlides pager={true} options={slideOpts}>
           <IonSlide>
                 <img alt="Label" src="/assets/img/labels/CitruCure1.jpg" />
           </IonSlide>

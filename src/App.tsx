@@ -29,6 +29,7 @@ import './theme/variables.css';
 
 const App: React.FC = () => (
   <IonApp>
+  
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/home" component={Home} exact={true} />

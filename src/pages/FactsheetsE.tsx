@@ -1,9 +1,14 @@
 import React from 'react';
-import { IonBackButton,IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonSlides,IonSlide  } from '@ionic/react';
+import { IonBackButton,IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonSlides,IonSlide,withIonLifeCycle  } from '@ionic/react';
 
 
 
 import './FactsheetsE.css';
+const slideOpts = {
+    effect: 'cube',initialSlide: 0,
+    speed: 400
+  
+  };
 const FactsheetsE: React.FC = () => {
   return (
     <IonPage>
@@ -12,7 +17,7 @@ const FactsheetsE: React.FC = () => {
         <IonButtons slot="start">
             <IonBackButton defaultHref="/home" />
           </IonButtons>
-          <IonTitle>Dosage</IonTitle>
+          <IonTitle>Factsheets</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -21,7 +26,7 @@ const FactsheetsE: React.FC = () => {
             <IonTitle size="large">Factsheets English</IonTitle>
           </IonToolbar>
         </IonHeader>
-          <IonSlides>
+          <IonSlides pager={true} options={slideOpts}>
           <IonSlide>
                 <img alt="Factsheet" src="/assets/img/facts/ICA3Eng.jpg" />
           </IonSlide>
@@ -43,4 +48,4 @@ const FactsheetsE: React.FC = () => {
   );
 };
 
-export default FactsheetsE;
+export default withIonLifeCycle(FactsheetsE);
